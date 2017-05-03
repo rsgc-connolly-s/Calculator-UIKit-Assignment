@@ -20,6 +20,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        //Clear the contents of the lable
+        lableDisplay.text = ""
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,5 +47,61 @@ class ViewController: UIViewController {
         model.addToNewValue(digit: "4")
         lableDisplay.text = model.providedValue
     }
+    
+    @IBAction func fivePressed(_ sender: Any) {
+        model.addToNewValue(digit: "5")
+        lableDisplay.text = model.providedValue
+    }
+    
+    @IBAction func sixPressed(_ sender: Any) {
+        model.addToNewValue(digit: "6")
+        lableDisplay.text = model.providedValue
+    }
+    
+    @IBAction func sevenPressed(_ sender: Any) {
+        model.addToNewValue(digit: "7")
+        lableDisplay.text = model.providedValue
+    }
+    
+    
+    @IBAction func eightPressed(_ sender: Any) {
+        model.addToNewValue(digit: "8")
+        lableDisplay.text = model.providedValue
+    }
+    
+    @IBAction func ninePressed(_ sender: Any) {
+        model.addToNewValue(digit: "9")
+        lableDisplay.text = model.providedValue
+    }
+    
+    @IBAction func zeroPressed(_ sender: Any) {
+        model.addToNewValue(digit: "0")
+        lableDisplay.text = model.providedValue
+    }
+    
+    @IBAction func deimalPressed(_ sender: Any) {
+        model.addToNewValue(digit: ".")
+        lableDisplay.text = model.providedValue
+    }
+    
+    @IBAction func multiply(_ sender: Any) {
+        model.multiply()
+    }
+    
+    @IBAction func equals(_ sender: Any) {
+        model.equals()
+        if model.computedValue != nil {
+            lableDisplay.text = String(format:"%g", model.computedValue!)
+        }
+    }
+    
+    @IBAction func division(_ sender: Any) {
+        model.divide()
+    }
+    
+    @IBAction func clear(_ sender: Any) {
+        model.clear()
+    }
+    
 }
 
