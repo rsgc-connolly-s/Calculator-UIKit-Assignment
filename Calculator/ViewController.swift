@@ -101,9 +101,21 @@ class ViewController: UIViewController {
     
     @IBAction func clear(_ sender: Any) {
         model.clear()
+        lableDisplay.text = ""
     }
     
+    @IBAction func addition(_ sender: Any) {
+        model.addition()
+    }
     
+    @IBAction func subtraction(_ sender: Any) {
+        model.subtraction()
+    }
+    
+    @IBAction func percentage(_ sender: Any) {
+        model.percentage()
+        equals("")
+    }
     
 }
 
