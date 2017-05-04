@@ -44,6 +44,31 @@ class Calculator {
         updateState()
     }
     
+    func addition() {
+        
+        //set the operation
+        operation = Operation.addition
+        
+        updateState()
+    }
+    
+    func subtraction() {
+        
+        //set the operation
+        operation = Operation.subtraction
+        
+        updateState()
+    }
+    
+    func percentage() {
+        
+        //set the operation
+        operation = Operation.percentage
+        
+        updateState()
+    }
+    
+    func
     /**
      Updates calculator state.
      
