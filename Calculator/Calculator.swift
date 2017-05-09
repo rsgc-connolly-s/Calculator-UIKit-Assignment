@@ -105,7 +105,7 @@ class Calculator {
                 // 2. When in this branch, a new provided value has been given.
                 
                 // So, perform the operation!
-                equals()    
+                equals()
             }
             
         }
@@ -125,18 +125,22 @@ class Calculator {
         } else if operation == Operation.division {
             computedValue = computedValue! / Double(providedValue)!
         } else if operation == Operation.addition {
-             computedValue = computedValue! + Double(providedValue)!
+            computedValue = computedValue! + Double(providedValue)!
         } else if operation == Operation.subtraction{
             computedValue = computedValue! - Double(providedValue)!
         } else if operation == Operation.percentage{
             computedValue = computedValue! / 100
-        } else if operation == Operation.plusMinus{
-            if computedValue == nil {
-           makeProvidedValueComputedValue()
-            computedValue = computedValue! * -1
-        } else {
-            computedValue = computedValue! * -1
+        } else if operation == Operation.plusMinus {
+            if computedValue != nil {
+                makeProvidedValueComputedValue()
+                computedValue = computedValue! * -1
+            }else{
+                computedValue = computedValue! * -1
+            }
         }
+        
+    
+
         
         // The operation selected has been performed, so get ready to receive new operation
         // and new value
