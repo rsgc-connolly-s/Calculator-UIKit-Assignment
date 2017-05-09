@@ -131,7 +131,7 @@ class Calculator {
         } else if operation == Operation.percentage{
             computedValue = computedValue! / 100
         } else if operation == Operation.plusMinus {
-            if computedValue != nil {
+            if computedValue == nil {
                 makeProvidedValueComputedValue()
                 computedValue = computedValue! * -1
             }else{
