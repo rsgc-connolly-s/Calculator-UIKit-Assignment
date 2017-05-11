@@ -121,28 +121,60 @@ class Calculator {
         
         // Check operation type
         if operation == Operation.multiplication {
+            //perform function
             computedValue = computedValue! * Double(providedValue)!
+        
         } else if operation == Operation.division {
+            //perform function
             computedValue = computedValue! / Double(providedValue)!
+        
         } else if operation == Operation.addition {
             computedValue = computedValue! + Double(providedValue)!
+        
         } else if operation == Operation.subtraction{
+            //perform function
             computedValue = computedValue! - Double(providedValue)!
+       
         } else if operation == Operation.percentage{
+            
+            //find state
             if computedValue != nil {
+            //perform function
             computedValue = computedValue! / (100)
+                
             } else {
-                computedValue = 0
+            //prevent crash
+            computedValue = 0
             }
+            
         } else if operation == Operation.plusMinus {
             
-            if
-            if computedValue != nil {
-                computedValue = computedValue! * (-1)
-            } else {
-                computedValue = 0
+            //find state
+            if providedValue == "" {
+            //make variable
+            if var temp = computedValue{
+            //make negative and positive
+            temp = temp * -1
+                    
+            //back to provided value
+            providedValue = String(format: "%g", temp)
+                }
+                
+            }
+            
+            else{
+            //store provided value
+            if var temp = Double(providedValue){
+                    
+            //make negative
+            temp = temp * -1
+                    
+            // back to provided value
+            providedValue = String(format:"%g", temp)
+                }
             }
         }
+        
         
     
 
