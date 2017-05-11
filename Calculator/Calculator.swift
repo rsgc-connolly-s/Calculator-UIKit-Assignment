@@ -129,13 +129,18 @@ class Calculator {
         } else if operation == Operation.subtraction{
             computedValue = computedValue! - Double(providedValue)!
         } else if operation == Operation.percentage{
-            computedValue = computedValue! / 100
+            if computedValue != nil {
+            computedValue = computedValue! / (100)
+            } else {
+                computedValue = 0
+            }
         } else if operation == Operation.plusMinus {
-            if computedValue == nil {
-                makeProvidedValueComputedValue()
-                computedValue = computedValue! * -1
-            }else{
-                computedValue = computedValue! * -1
+            
+            if
+            if computedValue != nil {
+                computedValue = computedValue! * (-1)
+            } else {
+                computedValue = 0
             }
         }
         
