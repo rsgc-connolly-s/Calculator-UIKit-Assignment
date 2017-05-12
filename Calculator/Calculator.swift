@@ -70,8 +70,33 @@ class Calculator {
     
     func plusMinus() {
         
-        //set the operation
-        operation = Operation.plusMinus
+            
+            //find state
+            if providedValue == "" && computedValue != nil{
+                //Create Temporary Variable
+                if var temporay = computedValue{
+                    
+                    //make negative and positive
+                    temporay = temporay * -1
+                    
+                    //back to provided value
+                    providedValue = String(format: "%g", temporay)
+                }
+                
+            }
+        
+                
+            else{
+                //store provided value
+                if var temporay = Double(providedValue){
+                    
+                    //make negative
+                    temporay = temporay * -1
+                    
+                    // back to provided value
+                    providedValue = String(format:"%g", temporay)
+                }
+            }
     }
     
     
@@ -147,37 +172,7 @@ class Calculator {
             computedValue = 0
             }
             
-        } else if operation == Operation.plusMinus {
-            
-            //find state
-            if providedValue == "" {
-            //make variable
-            if var temp = computedValue{
-            //make negative and positive
-            temp = temp * -1
-                    
-            //back to provided value
-            providedValue = String(format: "%g", temp)
-                }
-                
-            }
-            
-            else{
-            //store provided value
-            if var temp = Double(providedValue){
-                    
-            //make negative
-            temp = temp * -1
-                    
-            // back to provided value
-            providedValue = String(format:"%g", temp)
-                }
-            }
         }
-        
-        
-    
-
         
         // The operation selected has been performed, so get ready to receive new operation
         // and new value
