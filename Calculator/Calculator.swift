@@ -44,6 +44,9 @@ class Calculator {
         updateState()
     }
     
+    /**
+     Sets calculator operation to addittion, and computes a new value, if needed.
+     */
     func addition() {
         
         //set the operation
@@ -52,6 +55,9 @@ class Calculator {
         updateState()
     }
     
+    /**
+     Sets calculator operation to subtraction, and computes a new value, if needed.
+     */
     func subtraction() {
         
         //set the operation
@@ -60,6 +66,9 @@ class Calculator {
         updateState()
     }
     
+    /**
+     Sets calculator operation to percentage, and computes a new value, if needed.
+     */
     func percentage() {
         
         //set the operation
@@ -68,6 +77,9 @@ class Calculator {
         updateState()
     }
     
+    /**
+     Sets calculator operation to plusMinus, and computes a new value, if needed.
+     */
     func plusMinus() {
         
             
@@ -142,14 +154,17 @@ class Calculator {
      
      The current operation is performed on the computed value and the provided value.
      */
+    
     func equals() {
         
         // Check operation type
         if operation == Operation.multiplication {
+            
             //perform function
             computedValue = computedValue! * Double(providedValue)!
         
         } else if operation == Operation.division {
+            
             //perform function
             computedValue = computedValue! / Double(providedValue)!
         
@@ -157,6 +172,7 @@ class Calculator {
             computedValue = computedValue! + Double(providedValue)!
         
         } else if operation == Operation.subtraction{
+            
             //perform function
             computedValue = computedValue! - Double(providedValue)!
        
@@ -164,10 +180,12 @@ class Calculator {
             
             //find state
             if computedValue != nil {
+                
             //perform function
             computedValue = computedValue! / (100)
                 
             } else {
+                
             //prevent crash
             computedValue = 0
             }
