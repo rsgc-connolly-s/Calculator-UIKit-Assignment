@@ -84,10 +84,12 @@ class ViewController: UIViewController {
         lableDisplay.text = model.providedValue
     }
     
+    //Adition
     @IBAction func multiply(_ sender: Any) {
         model.multiply()
     }
     
+    //Equals
     @IBAction func equals(_ sender: Any) {
         model.equals()
         if model.computedValue != nil {
@@ -95,28 +97,34 @@ class ViewController: UIViewController {
         }
     }
     
+    //Division
     @IBAction func division(_ sender: Any) {
         model.divide()
     }
     
+    //Perform Clear
     @IBAction func clear(_ sender: Any) {
         model.clear()
         lableDisplay.text = ""
     }
     
+    //Perform Addition
     @IBAction func addition(_ sender: Any) {
         model.addition()
     }
     
+    //Perform Subtraction
     @IBAction func subtraction(_ sender: Any) {
         model.subtraction()
     }
     
+    //Perform Percentage
     @IBAction func percentage(_ sender: Any) {
         model.percentage()
         equals("")
     }
     
+    //Perform PlusMinus
     @IBAction func plusMinus(_ sender: Any) {
         model.plusMinus()
        lableDisplay.text = model.providedValue
